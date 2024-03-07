@@ -6,5 +6,19 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bg-gradient: linear-gradient(to bottom right, #e8bfd8, #d8e8bf, #bfd8e8, #);
+  --bg-grad: radial-gradient(
+    circle,
+    rgba(232, 191, 216, 1) 25%,
+    rgba(232, 227, 191, 1) 50%,
+    rgba(191, 232, 207, 1) 75%,
+    rgba(191, 196, 232, 1) 100%
+  );
+  --button-gradient: linear-gradient(90deg, #aea4e3, #d3ffe8);
+  --btn-home: linear-gradient(
+    90deg,
+    rgba(170, 7, 107, 1) 0%,
+    rgba(97, 4, 95, 1) 51%,
+    rgba(170, 7, 107, 1) 100%
+  );
 }
-

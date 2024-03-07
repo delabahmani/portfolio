@@ -4,6 +4,7 @@ import Link from "next/link";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import Image from "next/image";
 
 const navLinks = [
   {
@@ -24,13 +25,20 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100">
+    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#240230c7] bg-opacity-90">
       <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          LOGO
+          <Image
+            priority
+            className="w-[90px] h-[90px] md:w-[100px] md:h-[100px] lg:ml-5 xl:ml-8 xl:h-[120px] xl:w-[120px] 2xl:ml-36"
+            src="/images/logo.png"
+            alt="The word dela wrapped in braces"
+            width={120}
+            height={10}
+          />
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
