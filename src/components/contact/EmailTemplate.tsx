@@ -4,32 +4,84 @@ import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 interface EmailTemplateProps {
-  firstName: string;
+  firstName?: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
   firstName,
 }) => (
-  <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4">
-    <div>
+  <section className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative">
+    <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
+    <div className="z-10 ">
       <h5 className="text-xl font-bold text-white my-2">Let&apos;s Connect</h5>
       <p className="text-[#ADB7BE] mb-4 max-w-md">
         Whether it&apos;s a friendly hello or a potential collaboration, my
         inbox is open to all possibilities.
       </p>
       <div className="socials flex flex-row gap-2">
-        <Link href="https://github.com/delabahmani">
-          <IoLogoGithub aria-label="Github Logo Icon"/>
+        <Link href="https://github.com/delabahmani" className="text-white">
+          <IoLogoGithub aria-label="Github Logo Icon" />
         </Link>
-        <Link href="www.linkedin.com/in/delara-bahmani-0418b727b">
-          <FaLinkedin aria-label="Linkedin Logo Icon"/>
+        <Link
+          href="www.linkedin.com/in/delara-bahmani-0418b727b"
+          className="text-white"
+        >
+          <FaLinkedin aria-label="Linkedin Logo Icon" />
         </Link>
       </div>
     </div>
     <div>
-      <form className="flex flex-col gap-4">
-        <label htmlFor="email" className="text-white">Email</label>
-        <input type="email" id="email" required placeholder="johndoe@email.com"/>
+      <form className="flex flex-col">
+        <div className="mb-6">
+          <label
+            htmlFor="email"
+            className="text-white block mb-2 text-sm font-medium"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            required
+            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 "
+            placeholder="johndoe@email.com"
+          />
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="subject"
+            className="text-white block text-sm mb-2 font-medium"
+          >
+            Subject
+          </label>
+          <input
+            type="text"
+            id="subject"
+            required
+            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5 "
+            placeholder="Subject of your message"
+          />
+        </div>
+        <div className="mb-6">
+          <label
+            htmlFor="message"
+            className="text-white block text-sm mb-2 font-medium"
+          >
+            Message
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
+            placeholder="Your message"
+          />
+        </div>
+        <button
+          type="submit"
+          className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+        >
+          Send Message
+        </button>
       </form>
     </div>
   </section>
