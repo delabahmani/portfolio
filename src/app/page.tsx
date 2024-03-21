@@ -4,7 +4,8 @@ import HeroSection from "@/components/home/HeroSection";
 import Navbar from "@/components/Navbar";
 import AboutSection from "@/components/about/AboutSection";
 import ProjectsSection from "@/components/projects/ProjectsSection";
-import { EmailTemplate } from "@/components/contact/EmailTemplate";
+import EmailTemplate from "@/components/contact/EmailTemplate";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProjectsSection/>
       <EmailTemplate />
       </div>
+      <Footer />
     </main>
   );
 }
