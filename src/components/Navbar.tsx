@@ -25,15 +25,15 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 bg-[#240230c7] bg-opacity-90">
-      <div className="flex flex-wrap items-center justify-between mx-auto px-4 py-2">
+    <nav className="fixed mx-auto border border-[#2d0f38] top-0 left-0 right-0 z-10 bg-[#240230c7] bg-opacity-90">
+      <div className="flex container flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           <Image
             priority
-            className="w-[90px] h-[90px] md:w-[100px] md:h-[100px] lg:ml-5 xl:ml-8 xl:h-[120px] xl:w-[120px] 2xl:ml-36"
+            className="w-[90px] h-[90px] md:w-[100px] md:h-[100px] xl:h-[120px] xl:w-[120px]"
             src="/images/logo.png"
             alt="The word dela wrapped in braces"
             width={120}
@@ -42,11 +42,17 @@ const Navbar = () => {
         </Link>
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
-            <button onClick={() => setNavbarOpen(true)} className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
+            <button
+              onClick={() => setNavbarOpen(true)}
+              className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
               <Bars3Icon className="h-5 w-5" />
             </button>
           ) : (
-            <button onClick={() => setNavbarOpen(false)} className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
+            <button
+              onClick={() => setNavbarOpen(false)}
+              className=" flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+            >
               <XMarkIcon className="h-5 w-5" />
             </button>
           )}
@@ -61,7 +67,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks}/> : null}
+      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   );
 };

@@ -15,12 +15,12 @@ type FormState = {
 
 
 export default function EmailTemplate() {
-  const [sending, setSending] = useState(false);
+  const [emailSubmitted, setEmailSubmitted] = useState(false);
 
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSending(true);
+    
 
     const target = e.target as typeof e.target & {
       subject: { value: string };
@@ -53,6 +53,7 @@ export default function EmailTemplate() {
 
     if (response.status === 200) {
       console.log("Message sent!");
+      setEmailSubmitted(true);
     }
   };
 
@@ -72,7 +73,7 @@ export default function EmailTemplate() {
             <IoLogoGithub aria-label="Github Logo Icon" />
           </Link>
           <Link
-            href="www.linkedin.com/in/delara-bahmani-0418b727b"
+            href="https://www.linkedin.com/in/delara-bahmani-0418b727b"
             className="text-white"
           >
             <FaLinkedin aria-label="Linkedin Logo Icon" />
@@ -149,6 +150,13 @@ export default function EmailTemplate() {
           >
             Send Message
           </button>
+          {
+            emailSubmitted && (
+              <p className="text-green-500 text-sm mt-2 ">
+                Email sent successfully!
+              </p>
+            )
+          }
         </form>
       </div>
     </section>
