@@ -1,23 +1,26 @@
-import { EmailTemplate } from '@/components/contact/EmailTemplate';
-import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+// import { EmailTemplate } from "@/components/contact/EmailTemplate";
+import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const reactComponent = (
-  <div>
-    <p>Email Body</p>
-  </div>
-);
+const fromEmail = process.env.FROM_EMAIL;
 
-export async function POST() {
+export async function POST(req, res) {
+  const { email, subject, message, name } = await req.json();
+  console.log(email, subject, message, name);
   try {
     const data = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['delivered@resend.dev'],
-      subject: 'Hello world',
-      react: EmailTemplate({ firstName: 'John' }),
+      from: fromEmail,
+      to: ['bahmanidela@gmail.com'],
+      subject: subject,
+      react: (
+        <>
+          <h2>{subject}</h2>
+          <h3>From: {name}, {email}</h3>
+          <p>Message: {message}</p>
+        </>
+      ),
     });
-
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error });
