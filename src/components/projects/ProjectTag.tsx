@@ -13,7 +13,7 @@ const ProjectTag = ({ name, onClick, isSelected } :ProjectTagProps) => {
   return (
     <button
       onClick={() => onClick(name)}
-      className={` ${buttonStyles} rounded-full border-2 px-6 py-3 text-xl cursor-pointer`}
+      className={` ${buttonStyles} rounded-full border-2 px-[1rem] py-2 cursor-pointer text-lg md:text-xl md:px-6 md:py-6`}
     >
       {name}
     </button>

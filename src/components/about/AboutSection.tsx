@@ -73,7 +73,7 @@ const AboutSection = () => {
             collaborating on projects that ignite my creativity and drive
             innovation.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-center mt-8">
             <TabButton
               selectTab={() => handleTabChange({ id: "skills" })}
               active={tab === "skills"}
