@@ -54,10 +54,10 @@ const ProjectsSection = () => {
 
   return (
     <section ref={ref}>
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-9">
+      <h2 className="text-center text-3xl md:text-4xl font-bold text-white mt-4 mb-9">
         my projects
       </h2>
-      <div className="text-white flex flex-row justify-center gap-10 py-6">
+      <div className="text-white flex flex-row justify-center gap-5 pb-6 md:py-6 md:gap-10">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
