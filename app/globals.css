@@ -1,3 +1,5 @@
+@import url("https://fonts.cdnfonts.com/css/fixedsys-excelsior-301");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,4 +26,37 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.fixedsys {
+  font-family: "Fixedsys Excelsior 3.01", sans-serif;
+}
+
+.box-shadow-pop {
+  box-shadow: 0 0 0 4px #750544, 0 0 0 8px #f1faee;
+  border-radius: 0.5rem;
+}
+
+.input {
+  @apply bg-[#bda5ad] text-white focus:ring-y2kpink focus:border-y2kpink rounded-md py-1 px-2
+}
+
+.typewriter {
+  @apply relative w-[max-content] before:absolute before:inset-0 before:animate-typewriter before:bg-[#0a0a0a] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-black transition
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.butterfly {
+  animation: grow-and-shrink 2000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
