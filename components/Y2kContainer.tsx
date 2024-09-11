@@ -2,8 +2,8 @@ import React from "react";
 
 const Y2kContainer = () => {
   return (
-    <div className="relative p-4 w-80 text-xl fixedsys">
-      <div className="relative bg-gray-100 border-4 border-pink-500 rounded-lg">
+    <div className="relative p-4 w-80 md:w-[30rem]  text-xl fixedsys">
+      <div className="relative bg-gray-100 border-4 border-pink-500 rounded-lg md:h-[25rem]">
         <div className="bg-pink-500 text-white px-2 py-1 flex justify-between items-center rounded-t-lg">
           <span>New Collection</span>
           <span className="cursor-pointer">&times;</span>

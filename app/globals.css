@@ -38,11 +38,11 @@ body {
 }
 
 .input {
-  @apply bg-[#bda5ad] text-white focus:ring-y2kpink focus:border-y2kpink rounded-md py-1 px-2
+  @apply bg-[#bda5ad] text-black focus:ring-y2kpink focus:border-y2kpink rounded-md py-1 px-2 placeholder:text-black;
 }
 
 .typewriter {
-  @apply relative w-[max-content] before:absolute before:inset-0 before:animate-typewriter before:bg-[#0a0a0a] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-black transition
+  @apply relative w-[max-content] before:absolute before:inset-0 before:animate-typewriter before:bg-[#0a0a0a] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-black transition;
 }
 
 @keyframes grow-and-shrink {
@@ -59,4 +59,8 @@ body {
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.pixelated {
+  transform: scale(3); 
 }

@@ -1,5 +1,6 @@
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
+import TechnologiesContainer from "@/components/TechnologiesContainer";
 import Y2kContainer from "@/components/Y2kContainer";
 import Image from "next/image";
 
@@ -10,6 +11,11 @@ export default function Home() {
         <div>
           <Hero />
         </div>
+
+        <div>
+          <TechnologiesContainer />
+        </div>
+
         <div className="w-full px-4 py-12">
           <Y2kContainer />
         </div>

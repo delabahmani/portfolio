@@ -14,27 +14,27 @@ const Contact = () => {
         </div>
 
         <div className="w-full max-w-md">
-          <form className="flex flex-col space-y-4 ">
+          <form className="flex flex-col space-y-4  ">
             <input
               className="input"
               type="text"
-              placeholder="Name"
+              placeholder="name"
             />
 
             <input
               className="input"
               type="text"
-              placeholder="Email"
+              placeholder="email"
             />
             <textarea
-              placeholder="Message"
+              placeholder="message"
               className="input"
             />
             <button
               type="submit"
               className="bg-y2kpink h-10 w-full rounded-lg text-offwhite hover:bg-[#b73a75] transition "
             >
-              Send your message!
+              send your message!
             </button>
           </form>
         </div>
