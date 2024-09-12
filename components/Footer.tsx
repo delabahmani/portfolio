@@ -9,6 +9,7 @@ const Footer = () => {
         <p className="text-xs text-[#7f8c8d]">
           <Link
             href="https://pantheras.ca/"
+            target="_blank"
             className="hover:underline underline-offset-4 animate-pulse text-pink-300 hover:cursor-pointer"
           >
             Pantheras

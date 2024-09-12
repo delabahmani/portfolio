@@ -12,7 +12,7 @@ const Hero = () => {
       </div>
 
       <div className="relative flex-1 flex items-center justify-center">
-        <div className="relative flex flex-col items-center justify-center h-full p-4 mt-[30%]">
+        <div className="relative flex flex-col items-center justify-center h-full p-4 mt-20">
           <div className="relative mb-16 w-full">
             <h1 className="text-center text-3xl fixedsys typewriter z-10">
               hi! i'm dela, an aspiring front end dev

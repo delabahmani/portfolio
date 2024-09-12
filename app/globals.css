@@ -61,6 +61,3 @@ body {
   animation-direction: alternate;
 }
 
-.pixelated {
-  transform: scale(3); 
-}

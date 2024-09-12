@@ -20,7 +20,7 @@ const config: Config = {
         caret:
           "typewriter 2s steps(40) 1s forwards, blink 2s steps(1) infinite 2s",
 
-        "text-reveal": "text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards",
+        "text-reveal": "text-reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards",
       },
       keyframes: {
         typewriter: {
