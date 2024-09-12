@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
 import TechnologiesContainer from "@/components/TechnologiesContainer";
 import Y2kContainer from "@/components/Y2kContainer";
 
@@ -20,8 +21,8 @@ export default function Home() {
           <TechnologiesContainer />
         </div>
 
-        <div className="w-full px-4 py-12">
-          <Y2kContainer />
+        <div className="">
+          <Projects />
         </div>
 
         <div>
