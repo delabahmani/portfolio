@@ -26,7 +26,7 @@ export default function Home() {
         </div>
 
         <div>
-          <Contact />
+          <Contact accessKey={process.env.WEB3_KEY ? process.env.WEB3_KEY : ""}/>
         </div>
       </main>
     </div>
