@@ -5,12 +5,12 @@ import toast from "react-hot-toast";
 const Contact = ({ accessKey }: { accessKey: string }) => {
   const [loader, setLoader] = useState(false);
 
-  const onSubmit = async (event: any) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoader(true)
     event.preventDefault();
 
     try {
-      const formData = new FormData(event.target);
+      const formData = new FormData(event.currentTarget);
       formData.append("access_key", accessKey);
 
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -22,7 +22,7 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
 
       if (data.success) {
         toast.success("Message sent successfully!");
-        event.target.reset();
+        event.currentTarget.reset();
       }
     } catch (error) {
       toast.error("Could not send message, try again later");
@@ -37,7 +37,7 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
         <div className="w-full space-y-3 text-center">
           <h2 className="text-4xl">get in touch</h2>
           <p className="text-lg text-y2kgray">
-            whether you have a project in mind or just want to chat, i'd love to
+            whether you have a project in mind or just want to chat, i&apos;d love to
             hear from you
           </p>
         </div>
