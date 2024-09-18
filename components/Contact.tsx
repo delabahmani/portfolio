@@ -6,7 +6,7 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
   const [loader, setLoader] = useState(false);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    setLoader(true)
+    setLoader(true);
     event.preventDefault();
 
     try {
@@ -23,8 +23,12 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
       if (data.success) {
         toast.success("Message sent successfully!");
         event.currentTarget.reset();
+      } else {
+        console.error("Response Error:", data);
+        toast.error(`Error: ${data.message || "Could not send message, try again later"}`);
       }
     } catch (error) {
+      console.log("Fetch error:", error);
       toast.error("Could not send message, try again later");
     } finally {
       setLoader(false);
@@ -32,21 +36,26 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
   };
 
   return (
-    <section className="mt-24 w-screen py-12 px-4 md:px-0 md:py-24 lg:py-32 bg-[#1a1a1a] fixedsys ">
-      <div className="container mx-auto px-4 md:px-6 flex flex-col items-center justify-center space-y-12">
+    <section className="fixedsys mt-24 w-screen bg-[#1a1a1a] px-4 py-12 md:px-0 md:py-24 lg:py-32">
+      <div className="container mx-auto flex flex-col items-center justify-center space-y-12 px-4 md:px-6">
         <div className="w-full space-y-3 text-center">
           <h2 className="text-4xl">get in touch</h2>
           <p className="text-lg text-y2kgray">
-            whether you have a project in mind or just want to chat, i&apos;d love to
-            hear from you
+            whether you have a project in mind or just want to chat, i&apos;d
+            love to hear from you
           </p>
         </div>
 
         <div className="w-full max-w-md">
           <form className="flex flex-col space-y-4" onSubmit={onSubmit}>
-          <input type="hidden" name="subject" value="Portfolio Message" />
-          <input type="hidden" name="from_name" value="Portfolio"/>
-          <input type="checkbox" name="botcheck" className="hidden" style={{display: "none"}}/>
+            <input type="hidden" name="subject" value="Portfolio Message" />
+            <input type="hidden" name="from_name" value="Portfolio" />
+            <input
+              type="checkbox"
+              name="botcheck"
+              className="hidden"
+              style={{ display: "none" }}
+            />
             <input
               className="input"
               type="text"
@@ -70,15 +79,15 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
             />
             <button
               type="submit"
-              className="bg-y2kpink h-10 w-full rounded-lg text-offwhite hover:bg-[#b73a75] transition "
+              className="h-10 w-full rounded-lg bg-y2kpink text-offwhite transition hover:bg-[#b73a75]"
             >
               {!loader ? (
                 "send your message!"
               ) : (
-                <div role="status" className="items-center flex justify-center ">
+                <div role="status" className="flex items-center justify-center">
                   <svg
                     aria-hidden="true"
-                    className="w-6 h-6 text-gray-200 animate-spin dark:text-gray-600 fill-offwhite"
+                    className="h-6 w-6 animate-spin fill-offwhite text-gray-200 dark:text-gray-600"
                     viewBox="0 0 100 101"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"

@@ -5,6 +5,7 @@ import Projects from "@/components/Projects";
 import TechnologiesContainer from "@/components/TechnologiesContainer";
 
 export default function Home() {
+
   return (
     <div className="flex min-h-dvh items-center justify-center overflow-x-hidden">
       <main className="flex flex-col items-center justify-center gap-8 px-4">
