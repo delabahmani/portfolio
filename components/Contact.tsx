@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import toast from "react-hot-toast";
 
 const Contact = ({ accessKey }: { accessKey: string }) => {
   const [loader, setLoader] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     setLoader(true);
@@ -22,7 +23,7 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
 
       if (data.success) {
         toast.success("Message sent successfully!");
-        event.currentTarget.reset();
+        formRef.current?.reset();
       } else {
         console.error("Response Error:", data);
         toast.error(`Error: ${data.message || "Could not send message, try again later"}`);
@@ -47,7 +48,7 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
         </div>
 
         <div className="w-full max-w-md">
-          <form className="flex flex-col space-y-4" onSubmit={onSubmit}>
+          <form className="flex flex-col space-y-4" onSubmit={onSubmit} ref={formRef}>
             <input type="hidden" name="subject" value="Portfolio Message" />
             <input type="hidden" name="from_name" value="Portfolio" />
             <input
