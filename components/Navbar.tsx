@@ -22,7 +22,8 @@ const Navbar = () => {
 
           <nav className="sm:ml-auto flex gap-6">
             <Link
-              href="#"
+              href="https://github.com/delabahmani"
+              target="_blank"
               className="text-xs transition-all hover:animate-pulse hover:opacity-80"
               prefetch={false}
             >
@@ -35,7 +36,8 @@ const Navbar = () => {
             </Link>
 
             <Link
-              href="#"
+              href="https://www.linkedin.com/in/delara-bahmani/"
+              target="_blank"
               className="text-xs hover:animate-pulse"
               prefetch={false}
             >

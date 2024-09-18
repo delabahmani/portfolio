@@ -17,9 +17,7 @@ const config: Config = {
       },
       animation: {
         typewriter: "typewriter 2s steps(40) 1s forwards",
-        caret:
-          "typewriter 2s steps(40) 1s forwards, blink 2s steps(1) infinite 2s",
-
+        caret: "typewriter 2s steps(40) 1s forwards, blink 2s steps(1) infinite 2s",
         "text-reveal": "text-reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards",
       },
       keyframes: {
@@ -29,20 +27,11 @@ const config: Config = {
           },
         },
         blink: {
-          "0%": {
+          "0%, 100%": {
             opacity: "0",
-          },
-          "0.1%": {
-            opacity: "1",
           },
           "50%": {
             opacity: "1",
-          },
-          "50.1%": {
-            opacity: "0",
-          },
-          "100%": {
-            opacity: "0",
           },
         },
         "text-reveal": {
@@ -60,4 +49,5 @@ const config: Config = {
   },
   plugins: [],
 };
+
 export default config;

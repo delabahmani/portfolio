@@ -2,64 +2,51 @@ import Image from "next/image";
 import React from "react";
 
 const Hero = () => {
-  const text =
-    "I discovered my passion for web development in 2020 while taking a class in college. The thrill of seeing my first “Hello World” come to life ignited my interest. Since then, as a self-taught developer, I've been captivated by designing and building responsive, user-friendly digital experiences. My true love lies in turning blank canvases into visually stunning and user friendly websites.";
-
   return (
-    <div className="flex w-full h-full fixedsys">
-      <div className="relative flex-1 h-[80vh] w-[100vh]">
-        <Image src="/images/hero.webp" alt="" quality={100} fill priority />
+    <div className="fixedsys flex h-auto w-full flex-col-reverse items-center justify-center gap-10 px-5 py-10 md:px-10 md:py-5 lg:h-screen lg:flex-row lg:px-20 lg:py-20">
+      <div className="relative flex h-72 w-80 items-center justify-center md:h-full md:w-[530px] lg:w-[800px] lg:h-[500px] lg:flex-1">
+        <Image
+          src="/images/hero.webp"
+          alt=""
+          quality={100}
+          height={1000}
+          width={1000}
+          priority
+          className="aspect-square object-contain"
+        />
       </div>
 
-      <div className="relative flex-1 flex items-center justify-center">
-        <div className="relative flex flex-col items-center justify-center h-full p-4 mt-20">
-          <div className="relative mb-16 w-full">
-            <h1 className="text-center text-3xl fixedsys typewriter z-10">
-              hi! i'm dela, an aspiring front end dev
-            </h1>
+      <div className="relative flex w-full flex-col items-center justify-center gap-10  xl:w-1/2 lg:w-14 lg:flex-1">
+        <h1 className="fixedsys typewriter z-10 mt-10 p-4 text-center text-3xl md:text-4xl ">
+          hi i&apos;m dela, an aspiring front end dev
+        </h1>
 
-            <div className="text-center text-lg whitespace-pre-line break-words w-full max-w-xl mt-4">
-              <div className="relative inline-block">
-                {text.split(/(\s+)/).map((part, i) => (
-                  <React.Fragment key={i}>
-                    {part.trim() === "" ? (
-                      <span
-                        className="inline-block"
-                        style={{ display: "inline-block", width: "0.5em" }}
-                      >
-                        &nbsp;
-                      </span>
-                    ) : (
-                      <span
-                        className="inline-block animate-text-reveal [animation-fill-mode:backwards]"
-                        style={{ animationDelay: `${3 + i * 0.1}s` }}
-                      >
-                        {part}
-                      </span>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
-            </div>
+        {/* 
+      <div className="text-center text-lg whitespace-pre-line break-words w-full max-w-xl mt-4">
+        <div className="relative inline-block">
 
-            <div className="absolute top-2 -left-[70px] transform w-16 h-16 butterfly">
-              <Image
-                src="/images/butterfly.webp"
-                alt="pink butterfly"
-                quality={100}
-                fill
-                priority
-              />
-            </div>
-            <div className="absolute -right-16 -top-7 transform w-16 h-16 butterfly">
-              <Image
-                src="/images/butterfly.webp"
-                alt=""
-                quality={100}
-                fill
-                priority
-              />
-            </div>
+        </div>
+      </div> */}
+
+        <div className="absolute flex w-full items-center justify-between">
+          <div className="butterfly relative -left-0 bottom-5 h-12 w-12 transform md:-left-10 md:bottom-1 md:h-16 md:w-16 xl:bottom-1 xl:left-5">
+            <Image
+              src="/images/butterfly.webp"
+              alt="pink butterfly"
+              quality={100}
+              fill
+              priority
+              className="scale-x-[-1]"
+            />
+          </div>
+          <div className="butterfly relative -right-0 bottom-5 h-12 w-12 transform md:-right-10 md:bottom-1 md:h-16 md:w-16 xl:-top-1 xl:right-5">
+            <Image
+              src="/images/butterfly.webp"
+              alt=""
+              quality={100}
+              fill
+              priority
+            />
           </div>
         </div>
       </div>

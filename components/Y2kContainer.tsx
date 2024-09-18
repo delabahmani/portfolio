@@ -3,17 +3,15 @@ import React from "react";
 
 const Y2kContainer = ({ title }: { title: string }) => {
   return (
-    <div className="border-b-y2kpink border-r-y2kpink fixedsys border-r-4 border-b-4 w-96 h-96 flex flex-col">
-      <div className="border-t-2 border-t-pink-400 border-l-2 border-l-pink-400 h-12 bg-y2kpink ">
-        <div className="mt-1 mb-1 text-lg flex justify-between px-2 items-center ">{title}
-          <span className="hover:cursor-pointer text-3xl">
-            &minus;
-          &#9746;
-            </span>
+    <div className="fixedsys mt-10 flex w-72 flex-col border-b-4 border-r-4 border-b-y2kpink border-r-y2kpink md:h-96 md:w-96">
+      <div className="h-12 border-l-2 border-t-2 border-l-pink-400 border-t-pink-400 bg-y2kpink">
+        <div className="mb-1 mt-1 flex items-center justify-between px-2 text-lg">
+          {title}
+          <span className="text-3xl hover:cursor-pointer">&minus; &#9746;</span>
         </div>
       </div>
-      <div className="h-full bg-y2kgray border-t-4 border-l-4 border-l-gray-200 border-t-gray-200 border-r-4 border-b-4 border-r-y2kpink border-opacity-60">
-        <div className="flex items-center justify-center w-full h-full">
+      <div className="h-full border-b-4 border-l-4 border-r-4 border-t-4 border-l-gray-200 border-r-y2kpink border-t-gray-200 border-opacity-60 bg-y2kgray">
+        <div className="flex h-full w-full items-center justify-center">
           <Image
             src="/images/panthera.png"
             height={400}

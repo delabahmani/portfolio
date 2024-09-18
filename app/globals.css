@@ -9,6 +9,15 @@
   --foreground: #171717;
 }
 
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -42,16 +51,7 @@ body {
 }
 
 .typewriter {
-  @apply relative w-[max-content] before:absolute before:inset-0 before:animate-typewriter before:bg-[#0a0a0a] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:bg-black transition;
-}
-
-@keyframes grow-and-shrink {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+  @apply relative before:absolute before:inset-0 before:animate-typewriter before:bg-[#0a0a0a] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:h-[1.5em] after:bg-black transition;
 }
 
 .butterfly {
