@@ -6,7 +6,7 @@ const About = () => {
     "I discovered my passion for web development in 2020 while taking a class in college. The thrill of seeing my first 'Hello World' come to life ignited my interest. Since then, as a self-taught developer, I've been captivated by designing and building responsive, user-friendly digital experiences.";
 
   return (
-    <div className="fixedsys  flex min-h-screen w-full flex-col space-y-10 md:space-y-8 px-4 md:flex-row md:space-x-10 md:px-10">
+    <div className="fixedsys mt-28 md:mt-0 flex min-h-screen w-full flex-col space-y-10 md:space-y-8 px-4 md:flex-row md:space-x-10 md:px-10">
       <div className="flex md:flex-1 justify-center md:justify-end">
         <div className="flex flex-col items-center justify-center lg:max-w-[70vh]">
           <h1 className="text-3xl md:text-4xl lg:text-5xl ">a lil about me</h1>
