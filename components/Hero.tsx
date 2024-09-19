@@ -17,19 +17,13 @@ const Hero = () => {
       </div>
 
       <div className="relative flex w-full flex-col items-center justify-center gap-10  xl:w-1/2 lg:w-14 lg:flex-1">
-        <h1 className="fixedsys typewriter z-10 mt-10 p-4 text-center text-3xl md:text-4xl ">
+        <h1 className="fixedsys typewriter z-10 mt-10 p-4 text-center md:w-[70%] text-3xl lg:text-4xl ">
           hi i&apos;m dela, an aspiring front end dev
         </h1>
 
-        {/* 
-      <div className="text-center text-lg whitespace-pre-line break-words w-full max-w-xl mt-4">
-        <div className="relative inline-block">
-
-        </div>
-      </div> */}
 
         <div className="absolute flex w-full items-center justify-between">
-          <div className="butterfly relative -left-0 bottom-5 h-12 w-12 transform md:-left-10 md:bottom-1 md:h-16 md:w-16 xl:bottom-1 xl:left-5">
+          <div className="butterfly relative -left-0 bottom-5 h-12 w-12 transform md:left-8 md:bottom-1 md:h-16 md:w-16 lg:bottom-1 lg:-left-9">
             <Image
               src="/images/butterfly.webp"
               alt="pink butterfly"
@@ -39,7 +33,7 @@ const Hero = () => {
               className="scale-x-[-1]"
             />
           </div>
-          <div className="butterfly relative -right-0 bottom-5 h-12 w-12 transform md:-right-10 md:bottom-1 md:h-16 md:w-16 xl:-top-1 xl:right-5">
+          <div className="butterfly relative -right-0 bottom-5 h-12 w-12 transform md:right-8 md:bottom-1 md:h-16 md:w-16 lg:bottom-1 lg:-right-9">
             <Image
               src="/images/butterfly.webp"
               alt=""

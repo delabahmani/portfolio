@@ -6,12 +6,12 @@ const About = () => {
     "I discovered my passion for web development in 2020 while taking a class in college. The thrill of seeing my first 'Hello World' come to life ignited my interest. Since then, as a self-taught developer, I've been captivated by designing and building responsive, user-friendly digital experiences.";
 
   return (
-    <div className="fixedsys mt-32 flex min-h-screen w-full flex-col space-y-10 md:space-y-8 px-4 md:flex-row md:space-x-10 md:px-10">
+    <div className="fixedsys  flex min-h-screen w-full flex-col space-y-10 md:space-y-8 px-4 md:flex-row md:space-x-10 md:px-10">
       <div className="flex md:flex-1 justify-center md:justify-end">
         <div className="flex flex-col items-center justify-center lg:max-w-[70vh]">
-          <h1 className="text-3xl md:text-4xl">a lil about me</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl ">a lil about me</h1>
 
-          <div className="mt-4 w-full text-center text-md md:text-lg lg:text-xl">
+          <div className="mt-4 w-full text-center text-md md:text-lg lg:text-2xl">
             <div className="w-72 md:w-auto md:max-w-xl whitespace-pre-line break-words">
               {text.split(/(\s+)/).map((part, i) => (
                 <React.Fragment key={i}>
@@ -38,7 +38,7 @@ const About = () => {
       </div>
 
       <div className="flex  md:flex-1 items-center justify-center md:justify-start">
-        <div className="relative h-80 w-full max-w-[60vh] md:h-[90vh]">
+        <div className="relative h-80 w-full max-w-[60vh] md:h-[90vh] lg:w-[500px]">
           <Image
             src="/images/about-img.webp"
             alt="About me image"

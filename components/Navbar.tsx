@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link
               href="https://github.com/delabahmani"
               target="_blank"
-              className="text-xs transition-all hover:animate-pulse hover:opacity-80"
+              className="text-xs transition-all hover:animate-wiggle hover:opacity-80"
               prefetch={false}
             >
               <Image
@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link
               href="https://www.linkedin.com/in/delara-bahmani/"
               target="_blank"
-              className="text-xs hover:animate-pulse"
+              className="text-xs hover:animate-wiggle"
               prefetch={false}
             >
               <Image
