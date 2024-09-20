@@ -23,7 +23,7 @@ const Projects = () => {
         <Y2kContainer
           title="https://tech-news.app/"
           infoTitle="technews"
-          image="/images/tech2.webp"
+          image="/images/weow2.webp"
           description={[]}
           technologies={[
             "Next.js",
@@ -37,8 +37,8 @@ const Projects = () => {
           link="https://db-tech-news.vercel.app/"
         />
         <Y2kContainer
-          title=""
-          infoTitle=""
+          title="coming soon"
+          infoTitle="coming soon"
           image=""
           description={[]}
           technologies={[]}

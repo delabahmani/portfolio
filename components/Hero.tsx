@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       <div className="relative flex w-full flex-col items-center justify-center gap-10  xl:w-1/2 lg:w-14 lg:flex-1">
-        <h1 className="fixedsys typewriter z-10 mt-10 p-4 text-center md:w-[70%] text-3xl lg:text-4xl ">
+        <h1 className="fixedsys typewriter z-10 mt-10 p-4 text-center md:w-[70%] text-3xl lg:text-4xl lg:w-[100%]">
           hi i&apos;m dela, an aspiring front end dev
         </h1>
 

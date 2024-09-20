@@ -51,8 +51,10 @@ const Y2kContainer = ({
             src={image}
             width={2000}
             height={2000}
+            quality={100}
+            priority
             alt={`mockup of ${infoTitle} landing page`}
-            className="lg:h-[400px] lg:w-full"
+            className="lg:h-[400px] lg:w-full object-contain mx-auto aspect-square"
           />
         </div>
         <div
