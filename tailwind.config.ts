@@ -14,6 +14,7 @@ const config: Config = {
         black: "#333333",
         offwhite: "#F4F3EE",
         y2kpinkhover: "#B73A75",
+        y2kaccent: "#dd99bb",
       },
       animation: {
         typewriter: "typewriter 2s steps(40) 1s forwards",

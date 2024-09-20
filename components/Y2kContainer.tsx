@@ -7,6 +7,7 @@ import { IoIosLink } from "react-icons/io";
 
 const Y2kContainer = ({
   title,
+  infoTitle,
   image,
   description,
   technologies,
@@ -14,6 +15,7 @@ const Y2kContainer = ({
   link,
 }: {
   title: string;
+  infoTitle: string;
   image: string;
   description: string[];
   technologies: string[];
@@ -23,10 +25,12 @@ const Y2kContainer = ({
   const [showInfo, setShowInfo] = useState(false);
 
   return (
-    <div className="fixedsys relative mt-10 flex w-72 flex-col border-b-4 border-r-4 border-b-y2kpink border-r-y2kpink md:h-96 md:w-96">
+    <div className="fixedsys relative mt-10 flex w-72 flex-col border-b-4 border-r-4 border-b-y2kpink border-r-y2kpink md:h-96 md:w-96 lg:w-[500px] lg:h-[500px] ">
       <div className="h-12 border-l-2 border-t-2 border-l-pink-400 border-t-pink-400 bg-y2kpink">
         <div className="mb-1 mt-1 flex items-center justify-between px-2 text-lg">
+          <Link href={link}target="_blank" className="hover:underline">
           {title}
+          </Link>
           <span
             className="text-3xl hover:cursor-pointer"
             onClick={() => setShowInfo(!showInfo)}
@@ -45,9 +49,10 @@ const Y2kContainer = ({
         >
           <Image
             src={image}
-            height={400}
-            width={350}
-            alt={`mockup of ${title} landing page`}
+            width={2000}
+            height={2000}
+            alt={`mockup of ${infoTitle} landing page`}
+            className="lg:h-[400px] lg:w-full"
           />
         </div>
         <div
@@ -56,8 +61,8 @@ const Y2kContainer = ({
         >
           {showInfo && (
             <div className="h-full w-full p-4">
-              <h3 className="mb-2 text-3xl">{title}</h3>
-              <div className="mb-4">
+              <h3 className="mb-2 text-3xl">{infoTitle}</h3>
+              <div className="mb-4 flex flex-wrap  ">
                 {description.map((desc, i) => (
                   <p className="text-md" key={i}>
                     - {desc}
@@ -65,24 +70,24 @@ const Y2kContainer = ({
                 ))}
               </div>
 
-              <div className="mb-4">
-                <h4 className="mb-2 text-xl">technologies</h4>
-                <div className="flex flex-wrap gap-2">
+              <div className="py-4 px-4">
+                <h4 className="mb-2 text-xl text-center">technologies</h4>
+                <div className="flex flex-wrap gap-2 justify-center">
                   {technologies.map((tech, i) => (
                     <span
                       key={i}
-                      className="rounded bg-y2kpink px-2 py-1 text-md"
+                      className="rounded bg-y2kpink px-2 py-1 text-lg"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="flex flex-col gap-2 text-xl">
+              <div className="flex justify-between px-14 py-8 text-2xl">
                 <Link
                   href={github}
                   target="_blank"
-                  className="flex items-center gap-2 hover:text-y2kpink"
+                  className="flex items-center gap-2 hover:text-y2kaccent"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <FaGithub size={25} /> github
@@ -90,7 +95,7 @@ const Y2kContainer = ({
                 <Link
                   href={link}
                   target="_blank"
-                  className="flex items-center gap-2  hover:text-y2kpink"
+                  className="flex items-center gap-2  hover:text-y2kaccent"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <IoIosLink size={25} /> site
