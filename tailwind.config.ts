@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        colors: "background-color, color, border-color, text-color",
+      },
       colors: {
         y2kgray: "#C0C0C0",
         y2kpink: "#8F0653",
@@ -18,8 +22,10 @@ const config: Config = {
       },
       animation: {
         typewriter: "typewriter 2s steps(40) 1s forwards",
-        caret: "typewriter 2s steps(40) 1s forwards, blink 0.7s steps(1) infinite 2s",
-        "text-reveal": "text-reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards",
+        caret:
+          "typewriter 2s steps(40) 1s forwards, blink 0.7s steps(1) infinite 2s",
+        "text-reveal":
+          "text-reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
       },
       keyframes: {
@@ -47,8 +53,8 @@ const config: Config = {
           },
         },
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-9deg)' },
-          '50%': { transform: 'rotate(9deg)' },
+          "0%, 100%": { transform: "rotate(-9deg)" },
+          "50%": { transform: "rotate(9deg)" },
         },
       },
     },
@@ -56,4 +62,4 @@ const config: Config = {
   plugins: [],
 };
 
-export default config;
+module.exports = config;

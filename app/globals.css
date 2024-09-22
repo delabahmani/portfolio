@@ -4,18 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
-@keyframes grow-and-shrink {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
+html {
+  transition:
+    background-color 0.7s ease,
+    color 0.7s ease;
+}
+
+body.light {
+  --background: #f4f3ee;
+  --foreground: #333333;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,7 +30,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply transition-colors duration-700;
 }
 
 @layer utilities {
@@ -42,16 +44,18 @@ body {
 }
 
 .box-shadow-pop {
-  box-shadow: 0 0 0 4px #750544, 0 0 0 8px #f1faee;
+  box-shadow:
+    0 0 0 4px #750544,
+    0 0 0 8px #f1faee;
   border-radius: 0.5rem;
 }
 
 .input {
-  @apply bg-[#bda5ad] text-black focus:ring-y2kpink focus:border-y2kpink rounded-md py-1 px-2 placeholder:text-black;
+  @apply rounded-md bg-[#bda5ad] px-2 py-1 text-black placeholder:text-black focus:border-y2kpink focus:ring-y2kpink;
 }
 
 .typewriter {
-  @apply relative before:absolute before:inset-0 before:animate-typewriter before:bg-[#0a0a0a] after:absolute after:inset-0 after:w-[0.125em] after:animate-caret after:h-[1.5em] after:bg-black transition;
+  @apply relative transition before:absolute before:inset-0 before:animate-typewriter before:bg-[#f4f3ee] after:absolute after:inset-0 after:h-[1.5em] after:w-[0.125em] after:animate-caret after:bg-black dark:before:bg-[#0a0a0a];
 }
 
 .butterfly {
@@ -61,3 +65,15 @@ body {
   animation-direction: alternate;
 }
 
+.theme-toggle-button {
+  @apply fixed bottom-4 right-4 z-50 rounded-full p-2 shadow-lg;
+}
+
+@keyframes grow-and-shrink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

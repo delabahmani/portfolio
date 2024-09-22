@@ -25,11 +25,11 @@ const Y2kContainer = ({
   const [showInfo, setShowInfo] = useState(false);
 
   return (
-    <div className="fixedsys relative mt-10 flex w-72 flex-col border-b-4 border-r-4 border-b-y2kpink border-r-y2kpink md:h-96 md:w-96 lg:w-[500px] lg:h-[500px] ">
+    <div className="fixedsys relative mt-10 flex w-72 flex-col border-b-4 border-r-4 border-b-y2kpink border-r-y2kpink md:h-96 md:w-96 lg:h-[500px] lg:w-[500px]">
       <div className="h-12 border-l-2 border-t-2 border-l-pink-400 border-t-pink-400 bg-y2kpink">
         <div className="mb-1 mt-1 flex items-center justify-between px-2 text-lg">
-          <Link href={link}target="_blank" className="hover:underline">
-          {title}
+          <Link href={link} target="_blank" className="hover:underline">
+            {title}
           </Link>
           <span
             className="text-3xl hover:cursor-pointer"
@@ -47,15 +47,21 @@ const Y2kContainer = ({
           className="flex h-full w-full items-center justify-center hover:cursor-pointer"
           onClick={() => setShowInfo(!showInfo)}
         >
-          <Image
-            src={image}
-            width={2000}
-            height={2000}
-            quality={100}
-            priority
-            alt={`mockup of ${infoTitle} landing page`}
-            className="lg:h-[400px] lg:w-full object-contain mx-auto aspect-square"
-          />
+          {image ? (
+            <Image
+              src={image}
+              width={2000}
+              height={2000}
+              quality={100}
+              priority
+              alt={`mockup of ${infoTitle} landing page`}
+              className="aspect-square object-contain lg:h-[400px] lg:w-full"
+            />
+          ) : (
+            <div className="flex items-center justify-center bg-gray-200 lg:h-[400px] lg:w-full">
+              <p>No Image Available</p>
+            </div>
+          )}
         </div>
         <div
           className={`absolute inset-0 h-full w-full overflow-auto bg-black bg-opacity-95 transition-all duration-300 ${showInfo ? "translate-y-0" : "-translate-y-full"}`}
@@ -64,7 +70,7 @@ const Y2kContainer = ({
           {showInfo && (
             <div className="h-full w-full p-4">
               <h3 className="mb-2 text-3xl">{infoTitle}</h3>
-              <div className="mb-4 flex flex-wrap  ">
+              <div className="mb-4 flex flex-wrap">
                 {description.map((desc, i) => (
                   <p className="text-md" key={i}>
                     - {desc}
@@ -72,9 +78,9 @@ const Y2kContainer = ({
                 ))}
               </div>
 
-              <div className="py-4 px-4">
-                <h4 className="mb-2 text-xl text-center">technologies</h4>
-                <div className="flex flex-wrap gap-2 justify-center">
+              <div className="px-4 py-4">
+                <h4 className="mb-2 text-center text-xl">technologies</h4>
+                <div className="flex flex-wrap-reverse justify-center gap-2">
                   {technologies.map((tech, i) => (
                     <span
                       key={i}
@@ -97,7 +103,7 @@ const Y2kContainer = ({
                 <Link
                   href={link}
                   target="_blank"
-                  className="flex items-center gap-2  hover:text-y2kaccent"
+                  className="flex items-center gap-2 hover:text-y2kaccent"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <IoIosLink size={25} /> site
