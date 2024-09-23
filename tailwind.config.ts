@@ -19,21 +19,22 @@ const config: Config = {
         offwhite: "#F4F3EE",
         y2kpinkhover: "#B73A75",
         y2kaccent: "#dd99bb",
+        y2kpinkdark: "#63043a",
       },
       animation: {
-        typewriter: "typewriter 2s steps(40) 1s forwards",
-        caret:
-          "typewriter 2s steps(40) 1s forwards, blink 0.7s steps(1) infinite 2s",
+        // typewriter: "typewriter 2s steps(40) 1s forwards",
+        // caret:
+        //   "typewriter 2s steps(40) 1s forwards, blink 0.7s steps(1) infinite 2s",
         "text-reveal":
           "text-reveal 0.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s forwards",
         wiggle: "wiggle 1s ease-in-out infinite",
       },
       keyframes: {
-        typewriter: {
-          to: {
-            left: "100%",
-          },
-        },
+        // typewriter: {
+        //   to: {
+        //     left: "100%",
+        //   },
+        // },
         blink: {
           "0%, 100%": {
             opacity: "0",

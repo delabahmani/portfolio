@@ -25,7 +25,7 @@ const Y2kContainer = ({
   const [showInfo, setShowInfo] = useState(false);
 
   return (
-    <div className="fixedsys relative mt-10 flex w-72 flex-col border-b-4 border-r-4 border-b-y2kpink border-r-y2kpink md:h-96 md:w-96 lg:h-[500px] lg:w-[500px]">
+    <div className="fixedsys relative mt-10 flex w-72 flex-col border-b-4 border-r-4 border-b-y2kpink border-r-y2kpink md:h-96 md:w-96 lg:h-[500px] lg:w-[500px] text-offwhite dark:text-offwhite">
       <div className="h-12 border-l-2 border-t-2 border-l-pink-400 border-t-pink-400 bg-y2kpink">
         <div className="mb-1 mt-1 flex items-center justify-between px-2 text-lg">
           <Link href={link} target="_blank" className="hover:underline">

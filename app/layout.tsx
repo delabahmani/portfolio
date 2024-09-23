@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="min-h-[100dvh]">
         <div>
           <Navbar />
@@ -44,8 +44,22 @@ export default function RootLayout({
           <div>{children}</div>
           <Footer />
           <Toaster />
-
         </div>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              function getInitialTheme() {
+                const storedTheme = localStorage.getItem('darkMode')
+                if (storedTheme === 'true' || storedTheme === 'false') {
+                  return storedTheme === 'true';
+                }
+                return window.matchMedia('(prefers-color-scheme: dark)').matches;
+              }
+              const isDarkMode = getInitialTheme();
+              document.documentElement.classList.toggle('dark', isDarkMode);
+            })();
+          `
+        }} />
       </body>
     </html>
   );

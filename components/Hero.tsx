@@ -1,10 +1,13 @@
+"use client"
 import Image from "next/image";
 import React from "react";
+import { Typewriter } from "react-simple-typewriter";
+
 
 const Hero = () => {
   return (
     <div className="fixedsys flex h-auto w-full flex-col-reverse items-center justify-center gap-10 px-5 py-10 md:px-10 md:py-5 lg:h-screen lg:flex-row lg:px-20 lg:py-20">
-      <div className="relative flex h-72 w-80 items-center justify-center md:h-full md:w-[530px] lg:w-[800px] lg:h-[500px] lg:flex-1">
+      <div className="relative flex h-72 w-80 items-center justify-center md:h-full md:w-[530px] lg:w-[1300px] lg:h-[700px] lg:flex-1 mb-20">
         <Image
           src="/images/hero.webp"
           alt=""
@@ -16,10 +19,23 @@ const Hero = () => {
         />
       </div>
 
-      <div className="relative flex w-full flex-col items-center justify-center gap-10  xl:w-1/2 lg:w-14 lg:flex-1">
-        <h1 className="fixedsys typewriter z-10 mt-10 p-4 text-center md:w-[70%] text-3xl lg:text-4xl lg:w-[100%]">
+      <div className="relative flex w-full flex-col items-center justify-center gap-10  xl:w-1/2 lg:w-14 lg:flex-1 max-w-[500px]">
+        <div className="z-10 mt-10 p-4 text-center md:w-[70%] text-3xl lg:text-4xl lg:w-[100%]  absolute">
+        <Typewriter
+          words={["hi my name is dela", "an aspiring front end dev"]}
+          typeSpeed={100}
+          deleteSpeed={80}
+          delaySpeed={100}
+          loop={0}
+          cursor
+          cursorBlinking={true}
+
+        />
+        </div>
+
+        {/* <h1 className="fixedsys typewriter z-10 mt-10 p-4 text-center md:w-[70%] text-3xl lg:text-4xl lg:w-[100%]">
           hi i&apos;m dela, an aspiring front end dev
-        </h1>
+        </h1> */}
 
 
         <div className="absolute flex w-full items-center justify-between">

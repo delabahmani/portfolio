@@ -4,32 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-body.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}
-
-html {
+:root {
+  --bg-color: #F3E5F5;
+  --text-color: #141414;
   transition:
-    background-color 0.7s ease,
-    color 0.7s ease;
+    background-color 0.3s,
+    color 0.3s;
 }
 
-body.light {
-  --background: #f4f3ee;
-  --foreground: #333333;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root.dark {
+  --bg-color: #0a0a0a;
+  --text-color: #f4f3ee;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+html {
   @apply transition-colors duration-700;
 }
 
@@ -54,9 +47,9 @@ body {
   @apply rounded-md bg-[#bda5ad] px-2 py-1 text-black placeholder:text-black focus:border-y2kpink focus:ring-y2kpink;
 }
 
-.typewriter {
+/* .typewriter {
   @apply relative transition before:absolute before:inset-0 before:animate-typewriter before:bg-[#f4f3ee] after:absolute after:inset-0 after:h-[1.5em] after:w-[0.125em] after:animate-caret after:bg-black dark:before:bg-[#0a0a0a];
-}
+} */
 
 .butterfly {
   animation: grow-and-shrink 2000ms;
@@ -66,7 +59,7 @@ body {
 }
 
 .theme-toggle-button {
-  @apply fixed bottom-4 right-4 z-50 rounded-full p-2 shadow-lg;
+  @apply fixed bottom-4 right-4 z-40 rounded-full p-2 shadow-lg;
 }
 
 @keyframes grow-and-shrink {
@@ -77,3 +70,4 @@ body {
     transform: scale(1.1);
   }
 }
+

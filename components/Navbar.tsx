@@ -5,7 +5,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <div className="bg-gray-300 dark:bg-pink-500  bg-opacity-50 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 h-20  transition-colors duration-700">
+      <div className="bg-y2kpinkdark dark:bg-y2kpinkhover bg-opacity-50 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 h-20 transition-colors duration-700">
         <header className=" py-4 px-4 md:px-20 flex items-center justify-between h-full">
           <Link
             href="/"
