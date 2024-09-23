@@ -91,11 +91,11 @@ const Y2kContainer = ({
                   ))}
                 </div>
               </div>
-              <div className="flex justify-between px-14 py-8 text-2xl">
+              <div className="flex flex-col items-center justify-center lg:px-20 px-14 py-8 text-2xl md:flex-row md:justify-between gap-2 md:gap-0">
                 <Link
                   href={github}
                   target="_blank"
-                  className="flex items-center gap-2 hover:text-y2kaccent"
+                  className="flex items-center gap-3 hover:text-y2kaccent"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <FaGithub size={25} /> github
@@ -103,7 +103,7 @@ const Y2kContainer = ({
                 <Link
                   href={link}
                   target="_blank"
-                  className="flex items-center gap-2 hover:text-y2kaccent"
+                  className="flex items-center gap-3 hover:text-y2kaccent"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <IoIosLink size={25} /> site
