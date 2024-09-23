@@ -6,7 +6,7 @@ const Projects = () => {
     <div className="mb-32 mt-60">
       <h1 className="fixedsys text-center text-4xl">projects</h1>
 
-      <div className="mt-5 flex flex-wrap items-center justify-center gap-5 md:mt-20 md:gap-20">
+      <div className="mt-5 flex flex-wrap items-center justify-center gap-5 md:mt-10 md:gap-20">
         <Y2kContainer
           title="https://pantheras.ca/"
           infoTitle="pantheras"
@@ -24,7 +24,7 @@ const Projects = () => {
           title="https://tech-news.app/"
           infoTitle="technews"
           image="/images/weow2.webp"
-          description={[]}
+          description={["secure login via Github and Google using NextAuth for easy access", "users can create and edit posts, as well as the admin dashboard -- powered by MongoDB and Prisma, allowing for efficient management", "integrated cloudinary for seamless image uploads and management within posts"]}
           technologies={[
             "Next.js",
             "TypeScript",
@@ -36,7 +36,7 @@ const Projects = () => {
           github="https://github.com/delabahmani/technews"
           link="https://db-tech-news.vercel.app/"
         />
-        <Y2kContainer
+        {/* <Y2kContainer
           title="coming soon"
           infoTitle="coming soon"
           image=""
@@ -44,7 +44,7 @@ const Projects = () => {
           technologies={[]}
           github=""
           link=""
-        />
+        /> */}
       </div>
     </div>
   );

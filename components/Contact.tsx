@@ -37,7 +37,7 @@ const Contact = ({ accessKey }: { accessKey: string }) => {
   };
 
   return (
-    <section className="fixedsys mt-24 w-screen dark:bg-[#1a1a1a] bg-[#D3D3D3] px-4 py-12 md:px-0 md:py-24 lg:py-32 mb-7 ">
+    <section className="fixedsys mt-24 w-screen dark:bg-[#1a1a1a] bg-[#d1c9d3] px-4 py-12 md:px-0 md:py-24 lg:py-32 mb-7 ">
       <div className="container mx-auto flex flex-col items-center justify-center space-y-12 px-4 md:px-6">
         <div className="w-full space-y-3 text-center">
           <h2 className="text-4xl text-black dark:text-offwhite">get in touch</h2>
