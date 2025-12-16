@@ -4,9 +4,8 @@
 
 @layer base {
   :root {
-    /* Dark navy/gray background */
-    --background: 222 20% 14%;
-    --foreground: 210 40% 98%;
+    --background: 210 10% 8%;
+    --foreground: 210 10% 95%;
 
     --card: 222 20% 18%;
     --card-foreground: 210 40% 98%;
@@ -14,17 +13,16 @@
     --popover: 222 20% 18%;
     --popover-foreground: 210 40% 98%;
 
-    /* Coral/orange accent color */
-    --primary: 25 95% 53%;
+    --primary:  262, 46%, 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 20% 22%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 10% 15%; 
+    --secondary-foreground: 210 10% 95%;
 
-    --muted: 217 19% 27%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 210 10% 25%; 
+    --muted-foreground: 210 10% 60%; 
 
-    --accent: 25 95% 53%;
+    --accent: 1262, 46%, 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -32,7 +30,7 @@
 
     --border: 217 19% 27%;
     --input: 217 19% 27%;
-    --ring: 25 95% 53%;
+    --ring: 262, 46%, 50%;
 
     --radius: 0.5rem;
   }
