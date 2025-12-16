@@ -2,9 +2,9 @@ import { Button } from "./ui/button";
 
 export function Hero() {
   return (
-    <section id="home" className="flex items-center justify-center py-16 px-6 lg:px-16">
+    <section id="home" className="flex items-center justify-center py-20 mt-4 md:mt-0 px-6 lg:px-16">
       <div className="max-w-6xl w-full">
-        <h1 className="text-3xl lg:text-5xl font-bold mb-4 text-balance">
+        <h1 className="text-4xl lg:text-5xl font-bold mb-4 text-balance">
           Delara Bahmani
         </h1>
 
